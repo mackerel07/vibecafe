@@ -23,8 +23,8 @@
 
     <!-- ☕ 주문하기 탭 내용 (기존 기능 유지) -->
     <div id="viewOrder">
-        <!-- 주문서 폼 (JS에서 유효성 검사를 직접 처리하기 위해 novalidate 속성 추가) -->
-        <form id="orderForm" novalidate>
+        <!-- 주문서 폼 -->
+        <form id="orderForm">
         
         <!-- 1. 이름 (필수) -->
         <div>
@@ -32,10 +32,10 @@
             <input type="text" id="customerName" name="customerName" required>
         </div>
 
-        <!-- 2. 전화번호 -->
+        <!-- 2. 전화번호 (필수) -->
         <div>
             <label for="customerPhone">전화번호</label>
-            <input type="tel" id="customerPhone" name="customerPhone">
+            <input type="tel" id="customerPhone" name="customerPhone" required>
         </div>
 
         <!-- 3. 음료 선택 (data-price 속성에 가격 추가) -->

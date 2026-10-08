@@ -121,6 +121,11 @@ document.getElementById('orderForm').addEventListener('submit', async function(e
         return; 
     }
 
+    if (phoneInput === "") {
+        alert("전화번호를 입력해주세요");
+        return;
+    }
+
     if (selectedOption.value === "") {
         alert("음료를 선택해주세요");
         return; 
@@ -158,7 +163,7 @@ document.getElementById('orderForm').addEventListener('submit', async function(e
             .from('cafe_menu03')
             .insert({
                 customer_name: nameInput,
-                phone: phoneInput || null,
+                phone: phoneInput,
                 drink: beverageName,
                 drink_price: drinkPrice,
                 size: sizeValue,
